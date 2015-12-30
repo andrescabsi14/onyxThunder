@@ -1,0 +1,19 @@
+{
+  "name": "onyxthunder",
+  "version": "0.1.0",
+  "description": ".",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andrescabsi14/onyxthunder.git"
+  },
+  "author": "AndresCabrera - acdeveloper.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrescabsi14/onyxthunder/issues"
+  },
+  "homepage": "https://github.com/andrescabsi14/onyxthunder#readme"
+}
