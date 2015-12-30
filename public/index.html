@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="r07">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
@@ -9,12 +9,11 @@
 </head>
 <body>
 	<section class="notes" ng-controller="R07Controller as r07Ctrl">
-		<article>
-			<h1>My entry title</h1>
-			<h4>John 14:19-20</h4>
-			<h5>December 29 - 2015</h5>
+		<article id="{{r07Ctrl.note.id}}">
+			<h1>{{r07Ctrl.note.title}}</h1>
+			<h4>{{r07Ctrl.note.date}} - {{r07Ctrl.note.book.join(', ')}}</h4>
 			<div class="text">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget urna dui. Donec a malesuada ligula, a tempor lorem. In at ante porttitor, molestie tortor eget, eleifend arcu. In iaculis ornare felis, eget tristique ante. Aenean non arcu ultrices, porta est eu, semper lorem. Vivamus dictum velit odio, ut cursus massa laoreet lobortis. Nunc sollicitudin magna ac nulla gravida luctus. Sed urna leo, viverra sit amet porta ac, luctus malesuada magna. Morbi efficitur, risus nec ultrices finibus, ante leo rhoncus lacus, vel placerat neque nisl at tortor. In cursus gravida dignissim. Cras felis est, pharetra non ultrices eget, vehicula id sapien. Nam volutpat quam purus, id iaculis purus pulvinar ut. Morbi mollis sed diam vel vestibulum. Morbi a tortor est. Ut nec ex a nibh pulvinar ullamcorper sed at nulla.</p>
+				{{r07Ctrl.note.body}}
 			</div>
 		</article>
 	</section>
