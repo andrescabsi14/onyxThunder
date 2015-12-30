@@ -4,7 +4,7 @@
   "description": ".",
   "main": "index.js",
   "scripts": {
-    "test": "grunt run build"
+    "liveReload": "grunt"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "author": "AndresCabrera - acdeveloper.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andrescabsi14/onyxthunder/issues"
+    "url": "https://github.com/andrescabsi14/onyxThunder/issues"
   },
-  "homepage": "https://github.com/andrescabsi14/onyxthunder#readme"
+  "homepage": "https://github.com/andrescabsi14/onyxThunder/#readme"
 }
