@@ -20,9 +20,17 @@ module.exports = function (grunt) {
         }
       }
     },
+    browserify: {
+      dist: {
+        files: {
+          'public/bundle.js': ['app.js'],
+        }
+      }
+    },
     watch: {
       project: {
-        files: ['public/**/*.js', 'sass/*.sass', 'public/**/*.html', 'public/**/*.json', 'public/**/*.css'],
+        files: ['app.js', 'sass/*.sass', 'public/**/*.html', 'public/**/*.json', 'public/**/*.css'],
+        tasks: ['browserify'],
         options: {
           livereload: true
         }
@@ -37,6 +45,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browserify');
 
   grunt.registerTask('default', ['connect', 'watch']);
 
