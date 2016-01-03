@@ -4,14 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Onyx Thunder</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-	<script src="js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
 </head>
 <body>
 	<section class="notes" ng-controller="R07Controller as r07Ctrl">
 		<article id="{{r07Ctrl.note.id}}">
 			<h1>{{r07Ctrl.note.title}}</h1>
-			<h4>{{r07Ctrl.note.date}} - {{r07Ctrl.note.book.join(', ')}}</h4>
+			<h4>{{r07Ctrl.note.date | date}}</h4>
+			<div class="books">
+				<div class="item" ng-repeat="book in r07Ctrl.note.book">{{book}}</div>
+			</div>
+			<div class="type">
+				<div class="item" ng-repeat="type in r07Ctrl.note.type">{{type}}</div>
+			</div>
 			<div class="text">
 				{{r07Ctrl.note.body}}
 			</div>
